@@ -15,3 +15,12 @@ function multiplyNum (a, b) {
 function divideNum (a, b) {
     return a / b;
 }
+
+//input values
+let operator;
+let numOne;
+let numTwo;
+
+function operate(a, b, operator) {
+    return operator (a, b);
+}
