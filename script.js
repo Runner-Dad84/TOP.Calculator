@@ -26,13 +26,20 @@ function operate(numOne, numTwo, operator) {
 }
 
 // input numbers to display
-
+let displayValue = "";
 const numbers = document.querySelectorAll(".number");
 const display = document.getElementById("display");
+const clear = document.getElementById("clear");
 
 numbers.forEach(number => {
     number.addEventListener("click", () => {
         display.textContent += number.textContent;
+        displayValue += number.textContent;
     });
+});
+
+clear.addEventListener("click", () => {
+        display.textContent = "";
+        displayValue = 0;
 });
 
