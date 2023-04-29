@@ -25,20 +25,14 @@ function operate(numOne, numTwo, operator) {
     return operator (a, b);
 }
 
-//display
-let displayValue = "";
+// input numbers to display
 
 const numbers = document.querySelectorAll(".number");
+const display = document.getElementById("display");
 
 numbers.forEach(number => {
     number.addEventListener("click", () => {
-    console.log(number.innerHTML)
+        display.textContent += number.textContent;
     });
 });
-
-
-/*
-displayValue = display.textContent + "1";
-    return displayValue;
-*/
 
