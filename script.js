@@ -21,10 +21,24 @@ let operator;
 let numOne;
 let numTwo;
 
-function operate(a, b, operator) {
+function operate(numOne, numTwo, operator) {
     return operator (a, b);
 }
 
 //display
-let displayValue;
+let displayValue = "";
+
+const numbers = document.querySelectorAll(".number");
+
+numbers.forEach(number => {
+    number.addEventListener("click", () => {
+    console.log(number.innerHTML)
+    });
+});
+
+
+/*
+displayValue = display.textContent + "1";
+    return displayValue;
+*/
 

@@ -11,30 +11,34 @@
 </head>
 <body>
     <div class="calculator">
-        <div id="display">8888888888</div>
+        <div id="display"></div>
         <div class="buttons">
-            <div class="numbers">
-                <button id="zero">0</button>
-                <button id="one">1</button>
-                <button id="two">2</button>
-                <button id="three">3</button>
-                <button id="four">4</button>
-                <button id="five">5</button>
-                <button id="six">6</button>
-                <button id="seven">7</button>
-                <button id="eight">8</button>
-                <button id="nine">9</button>
+            <div class="middlePanel"> 
+                <div class="numbers">
+                    <button class="number">1</button>
+                    <button class="number">2</button>
+                    <button class="number">3</button>
+                    <button class="number">4</button>
+                    <button class="number">5</button>
+                    <button class="number">6</button>
+                    <button class="number">7</button>
+                    <button class="number">8</button>
+                    <button class="number">9</button>
+                </div>
+                <div class="operators">
+                    <button id="plus">+</button>
+                    <button id="minus">-</button>
+                    <button id="mult">*</button>
+                    <button id="div">/</button>
+                </div>
             </div>
-            <div class="operators">
-                <button id="plus">+</button>
-                <button id="minus">-</button>
-                <button id="mult">*</button>
-                <button id="div">/</button>
-            </div>
-            <button id="equals">=</button>
-            <button id="clear">Clear</button>
+            <div class = "bottomPanel">
+                <button id="equals">=</button>
+                <button class="number">0</button>
+                <button id="clear">Clear</button>
+            </div>    
         </div>
     </div>
-    
+    <p class = "msg"></p>
 </body>
 </html>

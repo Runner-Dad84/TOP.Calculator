@@ -10,8 +10,10 @@ button {
 
 .calculator {
     display:flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 8px solid lightseagreen;
 }
 
 #display {
@@ -20,8 +22,15 @@ button {
     border: 4px solid black;
     border-radius: 8px;
     font-size: 75px;
+    width: 340px;
+    height: 50px;
     color:black;
     background-color: lightcyan;
+}
+
+.middlePanel {
+    display: flex;
+    flex: 0 0 25%
 }
 
 .buttons {
@@ -29,15 +38,25 @@ button {
 }
 
 .numbers {
-
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 33.333%;
 }
 
 .operators {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 #plus, #minus, #mult, #div {
     width: 50px;
-   background-color: orange;
+    background-color: orange;
+}
+
+.bottomPanel {
+    display: flex;
+    flex-direction: row;
 }
 
 #equals {
