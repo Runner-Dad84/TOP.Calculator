@@ -34,7 +34,9 @@ button {
 }
 
 .buttons {
-    
+    display:flex;
+    flex-direction: column;
+    flex: auto;
 }
 
 .numbers {
@@ -56,6 +58,7 @@ button {
 
 .bottomPanel {
     display: flex;
+    flex: auto;
     flex-direction: row;
 }
 

@@ -21,8 +21,8 @@ let operator;
 let numOne;
 let numTwo;
 
-function operate(numOne, numTwo, operator) {
-    return operator (a, b);
+function operate(displayValue, numTwo, operator) {
+    return operator (displayValue, numTwo);
 }
 
 // input numbers to display
@@ -36,6 +36,7 @@ numbers.forEach(number => {
     number.addEventListener("click", () => {
         display.textContent += number.textContent;
         displayValue += number.textContent;
+        numOne = parseInt(displayValue);
     });
 });
 
@@ -61,8 +62,11 @@ operators.forEach(oper => {
     });
 });
 
+
+//Clear All
 clear.addEventListener("click", () => {
         display.textContent = "";
-        displayValue = 0;
+        displayValue = "";
+        numOne = "";
 });
 
