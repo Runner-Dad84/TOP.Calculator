@@ -1,14 +1,15 @@
 //global variables
-let operator;
+let operator = "";
 let numOne = "";
 let numTwo = "";
-let total;
-let operatorValue;
+let total = "";
+let operatorValue = "";
 let displayValue = "";
 
 
 function addNum (numOne, numTwo){
     total = numOne + numTwo;
+    return total;
 };
 
 
@@ -92,8 +93,10 @@ operators.forEach(oper => {
 });
 //Equals//
 equals.addEventListener("click", () => {
-       display.textContent += equals.textContent; 
-        console.log(total);
+        addNum(numOne, numTwo)
+        display.textContent = total; 
+        numOne = total;
+        numTwo ="";
         
 });
 
@@ -102,5 +105,9 @@ clear.addEventListener("click", () => {
         display.textContent = "";
         displayValue = "";
         numOne = "";
+        numTwo = "";
+        total = "";
+        operator = "";
+        operatorValue = "";
 });
 
