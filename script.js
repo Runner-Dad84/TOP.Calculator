@@ -6,6 +6,13 @@ let total = "";
 let operatorValue = "";
 let displayValue = "";
 
+// input numbers to display
+const numbers = document.querySelectorAll(".number");
+const display = document.getElementById("display");
+const clear = document.getElementById("clear");
+const operators = document.querySelectorAll(".operator");
+const equals = document.getElementById("equals");
+
 //calculator functions
 function addNum (numOne, numTwo){
     total = numOne + numTwo;
@@ -21,15 +28,9 @@ function multNum (numOne, numTwo){
 };
 function divNum (numOne, numTwo) {
     total = numOne / numTwo;
-    return total;
+    return total; 
 };
 
-// input numbers to display
-const numbers = document.querySelectorAll(".number");
-const display = document.getElementById("display");
-const clear = document.getElementById("clear");
-const operators = document.querySelectorAll(".operator");
-const equals = document.getElementById("equals");
 
 //numbers 1 and 2//
 numbers.forEach(number => {
@@ -68,8 +69,10 @@ equals.addEventListener("click", () => {
             subtrNum(numOne, numTwo)
         } else if (operatorValue === "*") {
             multNum(numOne, numTwo)
-        } else {divNum(numOne, numTwo)}
-
+        } else {if (numTwo === 0) {
+            return display.textContent = "Error"} else {
+            divNum(numOne, numTwo)}
+            };
         display.textContent = total; 
         numOne = total;
         numTwo ="";
