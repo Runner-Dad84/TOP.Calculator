@@ -12,6 +12,7 @@ const display = document.getElementById("display");
 const clear = document.getElementById("clear");
 const operators = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
+const negative = document.getElementById("negative");
 
 //calculator functions
 function addNum (numOne, numTwo){
@@ -30,7 +31,6 @@ function divNum (numOne, numTwo) {
     total = numOne / numTwo;
     return total; 
 };
-
 
 //numbers 1 and 2//
 numbers.forEach(number => {
@@ -59,6 +59,15 @@ operators.forEach(oper => {
         display.textContent = "";
         displayValue = "";
     });
+});
+
+negative.addEventListener("click", () => {
+    display.textContent *= (-1);
+    displayValue *= (-1);
+if (operatorValue === ""){
+    return numOne*= (-1);} else {
+        return numTwo*= (-1)
+    }
 });
 
 //Equals
