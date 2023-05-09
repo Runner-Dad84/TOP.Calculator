@@ -1,10 +1,10 @@
 //global variables
-let operator = "";
+let displayValue = "";
 let numOne = "";
 let numTwo = "";
-let total = "";
 let operatorValue = "";
-let displayValue = "";
+let total = "";
+
 
 // input numbers to display
 const numbers = document.querySelectorAll(".number");
@@ -32,6 +32,20 @@ function divNum (numOne, numTwo) {
     return total; 
 };
 
+function operate (){
+    if (operatorValue === "+"){
+        addNum(numOne, numTwo)
+    } else if (operatorValue === "-") {
+        subtrNum(numOne, numTwo)
+    } else if (operatorValue === "*") {
+        multNum(numOne, numTwo)
+    } else {if (numTwo === 0) {
+        return display.textContent = "Error"} else {
+        divNum(numOne, numTwo)}
+        };
+    display.textContent = total; 
+}
+
 //numbers 1 and 2//
 numbers.forEach(number => {
     number.addEventListener("click", () => {
@@ -42,8 +56,8 @@ numbers.forEach(number => {
                 return(numOne);
         } else if(
             operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
-                display.textContent += number.textContent;
-                displayValue += number.textContent;
+                display.textContent = number.textContent;
+                displayValue = number.textContent;
                 numTwo = Number(displayValue);
                 return(numTwo);
             }
@@ -54,10 +68,18 @@ numbers.forEach(number => {
 //Operator click
 operators.forEach(oper => {
     oper.addEventListener("click", () => {
-        display.textContent += oper.textContent;
+        if (operatorValue === ""){
+        display.textContent = oper.textContent;
         operatorValue = oper.textContent;
-        display.textContent = "";
-        displayValue = "";
+        displayValue = oper.textContent;
+        } else {
+            operate();
+            operatorValue = oper.textContent;
+            numOne=total;
+            displayValue=total;
+            numTwo="";
+            total="";
+        };
     });
 });
 
@@ -72,19 +94,12 @@ if (operatorValue === ""){
 
 //Equals
 equals.addEventListener("click", () => {
-        if (operatorValue === "+"){
-            addNum(numOne, numTwo)
-        } else if (operatorValue === "-") {
-            subtrNum(numOne, numTwo)
-        } else if (operatorValue === "*") {
-            multNum(numOne, numTwo)
-        } else {if (numTwo === 0) {
-            return display.textContent = "Error"} else {
-            divNum(numOne, numTwo)}
-            };
-        display.textContent = total; 
+        operate();
         numOne = total;
+        displayValue = numOne;
         numTwo ="";
+        total="";
+        operatorValue="";
     }
 );
 
@@ -95,7 +110,6 @@ clear.addEventListener("click", () => {
         numOne = "";
         numTwo = "";
         total = "";
-        operator = "";
         operatorValue = "";
 });
 
