@@ -16,19 +16,19 @@ const negative = document.getElementById("negative");
 
 //calculator functions
 function addNum (numOne, numTwo){
-    total = numOne + numTwo;
+    total = (Math.round((numOne + numTwo )* 100000)/100000);
     return total;
 };
 function subtrNum (numOne, numTwo){
-    total = numOne - numTwo;
+    total = (Math.round((numOne - numTwo )* 100000)/100000);
     return total;
 };
 function multNum (numOne, numTwo){
-    total = numOne * numTwo;
+    total = (Math.round((numOne * numTwo )* 100000)/100000);
     return total;
 };
 function divNum (numOne, numTwo) {
-    total = numOne / numTwo;
+    total = (Math.round((numOne / numTwo )* 100000)/100000);
     return total; 
 };
 
