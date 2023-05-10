@@ -50,14 +50,13 @@ function operate (){
 numbers.forEach(number => {
     number.addEventListener("click", () => {
         if (operatorValue === ""){
-            display.textContent += number.textContent;
+                display.textContent += number.textContent;
                 displayValue += number.textContent;
                 numOne = Number(displayValue);
                 return(numOne);
-        } else if(
-            operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
-                display.textContent = number.textContent;
-                displayValue = number.textContent;
+        } else if (operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
+                display.textContent += number.textContent;
+                displayValue += number.textContent;
                 numTwo = Number(displayValue);
                 return(numTwo);
             }
@@ -72,11 +71,14 @@ operators.forEach(oper => {
         display.textContent = oper.textContent;
         operatorValue = oper.textContent;
         displayValue = oper.textContent;
+        displayValue="";
+        display.textContent="";
         } else {
             operate();
             operatorValue = oper.textContent;
-            numOne=total;
-            displayValue=total;
+            numOne = total;
+            display.textContent = "";
+            displayValue="";
             numTwo="";
             total="";
         };

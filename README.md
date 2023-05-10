@@ -27,11 +27,9 @@ numOne = A, numTwo= B, operatorValue= O, displayValue='B', total= "" - Enter sec
 numOne = total(A), numTwo= "", operatorValue= "", displayValue=total(A) total= "" - Equals
 
 
-numOne = "", numTwo= "", operatorValue= "", displayValue= "", total= "" - Cleared
 numOne = A, numTwo= "", operatorValue= "", displayValue= 'A', total= "" - Enter first #
-numOne = A, numTwo= "", operatorValue= O, displayValue="", total= "" - Enter operator
+numOne = A, numTwo= "", operatorValue= O, displayValue=O, total= "" - Enter operator
 numOne = A, numTwo= B, operatorValue= O, displayValue='B', total= "" - Enter second #
-numOne = A, numTwo= B, operatorValue= O, displayValue='B', total= C - Second operator
-enter third number
+numOne = total(A), numTwo= "", operatorValue= "", displayValue=total(A) total= "" Second operator
 
 
