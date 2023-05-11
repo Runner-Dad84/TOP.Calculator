@@ -13,6 +13,10 @@ const clear = document.getElementById("clear");
 const operators = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
 const negative = document.getElementById("negative");
+const plus = document.getElementById("plus");
+const minus = document.getElementById("minus");
+const mult = document.getElementById("mult");
+const div = document.getElementById("div");
 
 //calculator functions
 function addNum (numOne, numTwo){
@@ -113,5 +117,49 @@ clear.addEventListener("click", () => {
         numTwo = "";
         total = "";
         operatorValue = "";
+        plus.style.background = "orange";
+        minus.style.background = "orange";
+        mult.style.background = "orange";
+        div.style.background = "orange";
+        equals.style.background = "lightskyblue";
 });
 
+function addPress (){
+    plus.style.background = "red";
+    minus.style.background = "orange";
+    mult.style.background = "orange";
+    div.style.background = "orange";
+    equals.style.background = "lightskyblue";
+};
+
+function minusPress (){
+    plus.style.background = "orange";
+    minus.style.background = "red";
+    mult.style.background = "orange";
+    div.style.background = "orange";
+    equals.style.background = "lightskyblue";
+};
+
+function multPress (){
+    plus.style.background = "orange";
+    minus.style.background = "orange";
+    mult.style.background = "red";
+    div.style.background = "orange";
+    equals.style.background = "lightskyblue";
+};
+
+function divPress (){
+    plus.style.background = "orange";
+    minus.style.background = "orange";
+    mult.style.background = "orange";
+    div.style.background = "red";
+    equals.style.background = "lightskyblue";
+};
+
+function equalPress (){
+    plus.style.background = "orange";
+    minus.style.background = "orange";
+    mult.style.background = "orange";
+    div.style.background = "orange";
+    equals.style.background = "pink";
+};

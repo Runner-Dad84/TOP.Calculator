@@ -26,14 +26,14 @@
                     <button class="number">9</button>
                 </div>
                 <div class="operators">
-                    <button class="operator" id="plus">+</button>
-                    <button class="operator" id="minus">-</button>
-                    <button class="operator" id="mult">*</button>
-                    <button class="operator" id="div">/</button>
+                    <button onclick="addPress()" class="operator" id="plus">+</button>
+                    <button onclick="minusPress()" class="operator" id="minus">-</button>
+                    <button onclick="multPress()"class="operator" id="mult">*</button>
+                    <button onclick="divPress()" class="operator" id="div">/</button>
                 </div>
             </div>
             <div class = "bottomPanel">
-                <button id="equals">=</button>
+                <button onclick="equalPress()"id="equals">=</button>
                 <button class="number">0</button>
                 <button id="clear">Clear</button>
                 <button id="negative">+/-</button>
