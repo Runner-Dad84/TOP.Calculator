@@ -11,6 +11,7 @@ let decimalPoint = false;
 const numbers = document.querySelectorAll(".number");
 const display = document.getElementById("display");
 const clear = document.getElementById("clear");
+const deleteLast = document.getElementById("delete");
 const operators = document.querySelectorAll(".operator");
 const equals = document.getElementById("equals");
 const negative = document.getElementById("negative");
@@ -19,6 +20,7 @@ const minus = document.getElementById("minus");
 const mult = document.getElementById("mult");
 const div = document.getElementById("div");
 const decimal = document.getElementById("decimal");
+
 
 //calculator functions
 function addNum (numOne, numTwo){
@@ -124,6 +126,22 @@ equals.addEventListener("click", () => {
     }
 );
 
+//Delete
+function deleteItem () {
+    display.textContent = display.textContent.substring(0, display.textContent.length-1);
+    displayValue = displayValue.substring(0, displayValue.length-1);
+    if (operatorValue === ""){
+        numOne = displayValue; 
+        return(numOne)
+    } else {
+        numTwo = displayValue;
+        return(numTwo)};
+}
+
+deleteLast.addEventListener("click", () => {
+    deleteItem();
+});
+
 //Clear All
 clear.addEventListener("click", () => {
         display.textContent = "";
@@ -140,6 +158,7 @@ clear.addEventListener("click", () => {
         equals.style.background = "lightskyblue";
 });
 
+//functions for button press colors
 function addPress (){
     plus.style.background = "red";
     minus.style.background = "orange";

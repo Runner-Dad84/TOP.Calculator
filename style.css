@@ -56,7 +56,7 @@ button {
     background-color: orange;
 }
 
-.bottomPanel {
+.bottomPanel, .bottomPanel1 {
     display: flex;
     flex: auto;
     flex-direction: row;
