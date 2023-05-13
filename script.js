@@ -4,6 +4,7 @@ let numOne = "";
 let numTwo = "";
 let operatorValue = "";
 let total = "";
+let decimalPoint = false;
 
 
 // input numbers to display
@@ -17,6 +18,7 @@ const plus = document.getElementById("plus");
 const minus = document.getElementById("minus");
 const mult = document.getElementById("mult");
 const div = document.getElementById("div");
+const decimal = document.getElementById("decimal");
 
 //calculator functions
 function addNum (numOne, numTwo){
@@ -37,6 +39,8 @@ function divNum (numOne, numTwo) {
 };
 
 function operate (){
+    numOne=Number(numOne);
+    numTwo=Number(numTwo);
     if (operatorValue === "+"){
         addNum(numOne, numTwo)
     } else if (operatorValue === "-") {
@@ -56,12 +60,12 @@ numbers.forEach(number => {
         if (operatorValue === ""){
                 display.textContent += number.textContent;
                 displayValue += number.textContent;
-                numOne = Number(displayValue);
+                numOne = displayValue;
                 return(numOne);
         } else if (operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
                 display.textContent += number.textContent;
                 displayValue += number.textContent;
-                numTwo = Number(displayValue);
+                numTwo = displayValue;
                 return(numTwo);
             }
         } 
@@ -98,6 +102,17 @@ if (operatorValue === ""){
     }
 });
 
+/*
+decimal.addEventListener("click", () => {
+    if (display.textContent.includes (".")=== false){
+        display.textContent +=decimal.textContent;
+        decimalPoint = true;
+    } else {
+        console.log("error");
+    }
+});
+*/
+
 //Equals
 equals.addEventListener("click", () => {
         operate();
@@ -117,6 +132,7 @@ clear.addEventListener("click", () => {
         numTwo = "";
         total = "";
         operatorValue = "";
+        decimalPoint= false;
         plus.style.background = "orange";
         minus.style.background = "orange";
         mult.style.background = "orange";
