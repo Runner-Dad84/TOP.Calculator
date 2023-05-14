@@ -7,6 +7,7 @@ let total = "";
 let decimalPoint = false;
 
 
+
 // input numbers to display
 const numbers = document.querySelectorAll(".number");
 const display = document.getElementById("display");
@@ -20,6 +21,7 @@ const minus = document.getElementById("minus");
 const mult = document.getElementById("mult");
 const div = document.getElementById("div");
 const decimal = document.getElementById("decimal");
+const displayOperator = document.getElementById("displayOperator");
 
 
 //calculator functions
@@ -81,6 +83,7 @@ operators.forEach(oper => {
         display.textContent = oper.textContent;
         operatorValue = oper.textContent;
         displayValue = oper.textContent;
+        displayOperator.textContent = oper.textContent;
         displayValue="";
         display.textContent="";
         } else {
@@ -89,6 +92,7 @@ operators.forEach(oper => {
             numOne = total;
             display.textContent = "";
             displayValue="";
+            displayOperator.textContent="";
             numTwo="";
             total="";
         };
@@ -123,6 +127,7 @@ equals.addEventListener("click", () => {
         numTwo ="";
         total="";
         operatorValue="";
+        displayOperator.textContent="";
     }
 );
 
@@ -133,6 +138,9 @@ function deleteItem () {
     if (operatorValue === ""){
         numOne = displayValue; 
         return(numOne)
+    } else if (numTwo==="" && operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
+        operatorValue="";
+        displayOperator.textContent="";
     } else {
         numTwo = displayValue;
         return(numTwo)};
@@ -151,6 +159,7 @@ clear.addEventListener("click", () => {
         total = "";
         operatorValue = "";
         decimalPoint= false;
+        displayOperator.textContent = "";
         plus.style.background = "orange";
         minus.style.background = "orange";
         mult.style.background = "orange";
