@@ -3,82 +3,109 @@ body {
 }
 
 button {
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 4px solid black;
+    border-radius: 25px;
     font-size: 55px;
 }
 
 .calculator {
     display:flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border: 8px solid lightseagreen;
+    width: 850px;
+    gap: 20px;
 }
 
 #screen {
     display:flex;
-    justify-content: center;
     border: 4px solid black;
     border-radius: 8px;
     background-color: lightcyan;
+    gap: 25px;
 }
 
-#display {
+#display, #displayOperator {
     display: flex;
     justify-content: center;
-    font-size: 75px;
-    width: 340px;
+    align-items: center;
+    font-size: 70px;
     height: 50px;
     color:black;
     background-color: lightcyan;
 }
+#display {
+    width: 340px;
+}
 
 #displayOperator {
-    font-size: 75px;
     width: 50px;
-    height: 50px;
 }
 
 .middlePanel {
     display: flex;
-    flex: 0 0 25%
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 25%;
+    gap: 30px;
 }
 
 .buttons {
     display:flex;
     flex-direction: column;
-    flex: auto;
+    justify-content: center;
+    align-items: center;
+    flex:auto;
+    gap: 30px;
 }
 
 .numbers {
     display: flex;
     flex-wrap: wrap;
     flex: 0 0 33.333%;
+    gap: 20px;
+}
+
+.number, #decimal {
+    display: flex;
+    align-items: Center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
 }
 
 .operators {
     display: flex;
     flex-direction: column;
+    gap: 15px;
     align-items: flex-end;
 }
 
 #plus, #minus, #mult, #div {
-    width: 50px;
+    width: 80px;
+    height: 80px;
     background-color: orange;
 }
+
 
 .bottomPanel, .bottomPanel1 {
     display: flex;
     flex: auto;
     flex-direction: row;
+    gap: 20px;
 }
 
 #equals {
-    width: 75px;
+    width: 225px;
     background-color: lightskyblue;
 }
-#clear {
+#clear, #delete {
     width: 175px;
-    background-color: lightcoral;
+    height: 50px;
+    font-size: 30px;
+    background-color: maroon;
+    color:azure;
+}
+
+#negative {
+    font-size: 46px;
 }
