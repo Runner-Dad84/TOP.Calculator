@@ -35,10 +35,6 @@ numOne = total(A), numTwo= "", operatorValue= "", displayValue=total(A) total= "
 
 To do list:
 
-Fix delete button on the second number. Currently it deletes the last number for numTwo and the operator.
-Decimal Point button.
-    Steps:
-    Identify the position of the deicimal point.
-    Abstract and copy the numbers to the right of the decimal.
-    Divide the number by 10 for each number (e.g 566 is 566/1000)
-    Add the fractional number to the whole number.
+Fix delete button on the second number. Currently it deletes the last number for numTwo and the operator. - COMPLETED 5/15/23
+Decimal Point button - COMPLETED 5/15/23
+Limit the number of decimal point places to 9 spots and 1 decimal.

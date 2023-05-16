@@ -6,8 +6,6 @@ let operatorValue = "";
 let total = "";
 let decimalPoint = false;
 
-
-
 // input numbers to display
 const numbers = document.querySelectorAll(".number");
 const display = document.getElementById("display");
@@ -22,7 +20,6 @@ const mult = document.getElementById("mult");
 const div = document.getElementById("div");
 const decimal = document.getElementById("decimal");
 const displayOperator = document.getElementById("displayOperator");
-
 
 //calculator functions
 function addNum (numOne, numTwo){
@@ -108,16 +105,15 @@ if (operatorValue === ""){
     }
 });
 
-/*
 decimal.addEventListener("click", () => {
     if (display.textContent.includes (".")=== false){
         display.textContent +=decimal.textContent;
+        displayValue += decimal.textContent;
         decimalPoint = true;
     } else {
         console.log("error");
     }
 });
-*/
 
 //Equals
 equals.addEventListener("click", () => {
