@@ -138,7 +138,7 @@ function deleteItem () {
     if (operatorValue === ""){
         numOne = displayValue; 
         return(numOne)
-    } else if (numTwo==="" && operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
+    } else if (numTwo==="" && (operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/")){
         operatorValue="";
         displayOperator.textContent="";
     } else {
