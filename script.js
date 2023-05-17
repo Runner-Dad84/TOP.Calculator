@@ -58,18 +58,21 @@ function operate (){
 //numbers 1 and 2//
 numbers.forEach(number => {
     number.addEventListener("click", () => {
-        if (operatorValue === ""){
+        if (display.textContent.length < 10) {
+            if (operatorValue === ""){
                 display.textContent += number.textContent;
                 displayValue += number.textContent;
                 numOne = displayValue;
                 return(numOne);
-        } else if (operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
+            } else if (operatorValue === "-"||operatorValue === "+"||operatorValue === "*"||operatorValue === "/"){
                 display.textContent += number.textContent;
                 displayValue += number.textContent;
                 numTwo = displayValue;
                 return(numTwo);
             }
-        } 
+        
+        } else {console.log("error")};
+     } 
     )
 });
 
